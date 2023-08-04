@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5yapfsZpBngG9oe+5rrPYjF50U2T1q0NvS4ddE2MmsSOTiK1evJbwXqWP7/5BYqOWw603mzk2WwllXG+rTYvEg==",
+  "dgSpecHash": "aLKThK9jSytRayO4beDhdgwRU1gSlMrdL0MMqbkDMXNkhI3o5rkKGAWQx7HDiXVVE2SBCQVVfjkwC6uNkGm6Xg==",
   "success": true,
-  "projectFilePath": "C:\\CFA\\GESTION DE APLICACION\\CAPACITACION\\capacitacionmobile\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj",
+  "projectFilePath": "C:\\Users\\dmosquera\\source\\repos\\HolaMundoAPI\\HolaMundoAPI\\HolaMundoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dmosquera\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dmosquera\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
