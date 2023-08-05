@@ -1,4 +1,5 @@
 ﻿using HolaMundoAPI.Data.Enumerations;
+using Microsoft.EntityFrameworkCore;
 
 namespace HolaMundoAPI.Data
 {
@@ -40,6 +41,8 @@ namespace HolaMundoAPI.Data
                 this.AddUser("GuestUser", "123", 3);
                 await this.context.SaveChangesAsync();
             }
+
+            await this.context.Database.MigrateAsync();
 
         }
 
