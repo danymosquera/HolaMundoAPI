@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HolaMundoAPI.Data;
 using HolaMundoAPI.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HolaMundoAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ClientsController : ControllerBase
