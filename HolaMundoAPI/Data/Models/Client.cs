@@ -15,5 +15,8 @@ namespace HolaMundoAPI.Data.Models
         [Required]
         public string Dna { get; set; }
 
+        public double Latitude { get; set; }
+
+        public double Longitude { get; set; }
     }
 }

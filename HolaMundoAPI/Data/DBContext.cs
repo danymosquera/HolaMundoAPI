@@ -17,7 +17,7 @@ namespace HolaMundoAPI.Data
         public DbSet<Client> Client { get; set; } = default!;
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<User> Users { get; set; }
-
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
