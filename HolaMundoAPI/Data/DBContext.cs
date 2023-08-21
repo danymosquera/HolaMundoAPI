@@ -24,6 +24,7 @@ namespace HolaMundoAPI.Data
             modelBuilder.Entity<Client>().ToTable(nameof(Client));
             modelBuilder.Entity<UserRole>().ToTable(nameof(UserRole));
             modelBuilder.Entity<User>().ToTable(nameof(User));
+            modelBuilder.Entity<Product>().ToTable(nameof(Product));
 
             base.OnModelCreating(modelBuilder);
         }
