@@ -1,4 +1,5 @@
 ﻿using HolaMundoAPI.Data.Enumerations;
+using HolaMundoAPI.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HolaMundoAPI.Data
@@ -36,14 +37,38 @@ namespace HolaMundoAPI.Data
 
             if (!this.context.Users.Any())
             {
-                this.AddUser("AdminUser", "123", 1);
-                this.AddUser("StaffUser", "123", 2);
-                this.AddUser("GuestUser", "123", 3);
+                this.AddUser("Admin", "123", 1);
+                this.AddUser("pepito", "123", 2);
+                this.AddUser("user", "123", 3);
+                await this.context.SaveChangesAsync();
+            }
+
+            var user = this.CheckUser(1);
+
+            if (!this.context.Products.Any())
+            {
+                this.AddProduct("Blue", 20000, user);
+                this.AddProduct("Yellow ", 15000, user);
+                this.AddProduct("Black", 22000, user);
+                this.AddProduct("Red", 16000, user);
+                this.AddProduct("Green", 20000, user);
+                this.AddProduct("Orange", 12000, user);
+                this.AddProduct("Burple ", 21000, user);
+                this.AddProduct("Brown", 23000, user);
+                this.AddProduct("white ", 23000, user);
+                this.AddProduct("Grey ", 19000, user);
                 await this.context.SaveChangesAsync();
             }
 
             await this.context.Database.MigrateAsync();
 
+        }
+
+        private User CheckUser(long userId)
+        {
+            // Add user
+            var user = this.context.Users.Find(userId);
+            return user;
         }
 
         private void AddClient(string name)
@@ -71,6 +96,19 @@ namespace HolaMundoAPI.Data
                 UserName = userId,
                 Password = password,
                 RoleId = userRoleId
+            });
+        }
+
+        private void AddProduct(string name, decimal price, User user)
+        {
+            this.context.Products.Add(new Models.Product
+            {
+                Name = name,
+                Price = price,
+                IsAvailabe = true,
+                Stock = this.random.Next(100),
+                User = user,
+                ImageUrl = $"~/images/Products/{name}.png"
             });
         }
 
