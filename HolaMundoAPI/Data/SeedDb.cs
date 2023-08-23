@@ -53,9 +53,9 @@ namespace HolaMundoAPI.Data
                 this.AddProduct("Red", 16000, user);
                 this.AddProduct("Green", 20000, user);
                 this.AddProduct("Orange", 12000, user);
-                this.AddProduct("Burple ", 21000, user);
+                this.AddProduct("Purple ", 21000, user);
                 this.AddProduct("Brown", 23000, user);
-                this.AddProduct("white ", 23000, user);
+                this.AddProduct("White ", 23000, user);
                 this.AddProduct("Grey ", 19000, user);
                 await this.context.SaveChangesAsync();
             }

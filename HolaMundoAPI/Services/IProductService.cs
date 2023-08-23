@@ -9,6 +9,16 @@ namespace HolaMundoAPI.Services
 
         IQueryable GetAllWithUsers();
 
+        IEnumerable<Product> GetProduts();
+
+        void AddProduct(Product product);
+
+        void UpdateProduct(Product product);
+
+        void DeleteProduct(Product product);
+
+        Task<bool> SaveAllAsync();
+        
         IEnumerable<SelectListItem> GetComboProducts();
     }
 }

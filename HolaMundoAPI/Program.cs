@@ -25,7 +25,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Example API", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Hola Mundo API", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

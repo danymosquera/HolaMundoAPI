@@ -31,6 +31,31 @@ namespace HolaMundoAPI.Services
             return this._context.Products.Include(p => p.User);
         }
 
+        public IEnumerable<Product> GetProduts()
+        {
+            return this._context.Products.OrderBy(p => p.Name);
+        }
+
+        public void AddProduct(Product product)
+        {
+            this._context.Products.Add(product);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            this._context.Products.Update(product);
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            this._context.Products.Remove(product);
+        }
+
+        public async Task<bool> SaveAllAsync()
+        { 
+         return await this._context.SaveChangesAsync() > 0;
+        }
+
         public IEnumerable<SelectListItem> GetComboProducts()
         {
             var list = this._context.Products.Select(p => new SelectListItem
